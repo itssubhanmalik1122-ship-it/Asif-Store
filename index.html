@@ -18,19 +18,56 @@
   <p>Affordable & quality products</p>
 </header>
 
-<div class="products">
-  <div class="box">
-    <h3>Product 1</h3>
-    <p>Price: Rs. 500</p>
-  </div>
-  <div class="box">
-    <h3>Product 2</h3>
-    <p>Price: Rs. 1000</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asif Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; background:#f4f4f4; margin:0; }
+    header { background:#222; color:white; padding:15px; text-align:center; }
+    .products { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:15px; padding:20px; }
+    .box { background:white; padding:15px; border-radius:10px; }
+    footer { background:#222; color:white; text-align:center; padding:10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Asif Store</h1>
+  <p>Affordable & quality products</p>
+</header>
+
+<div class="products" id="products"></div>
 
 <footer>
-  <p>Contact: 03XX-XXXXXXX</p>
+  <p>Contact: 0312-1234567</p>
+</footer>
+
+<script>
+  const productList = [
+    "Chart paper", "Glacepaper", "Butter paper", "Copies", "Register",
+    "Sheets", "Computer sheets", "Assignment sheets", "Clipboard", "Geometry",
+    "Pen", "Pencil", "Erasors", "Shopners", "Erasers",
+    "Mathematical Geometry", "Bol pens", "Markers", "Gelpen", "Pointer",
+    "Glue", "Ink", "Board markers", "Ice cream sticks", "Scissor",
+    "Lunch box's", "Water bottle", "Sock's", "Belt", "Graph papers"
+  ];
+
+  const productsDiv = document.getElementById("products");
+  productList.forEach(name => {
+    const box = document.createElement("div");
+    box.className = "box";
+    box.innerHTML = `<h3>${name}</h3>`;
+    productsDiv.appendChild(box);
+  });
+</script>
+
+</body>
+</html>
+
+<footer>
+  <p>Contact: 0333-8526030</p>
 </footer>
 
 </body>
